@@ -32,6 +32,6 @@ To disable the link to the original you can set `lightbox:false`.
 
 For a custom CSS class of the block use `class:classname`.
 
-For a custom CSS class of the thumb use 'img-class:classname'.
+For a custom CSS class of the thumb use `img-class:classname`.
 
 The rest of the available options relate to the Thumb plugin. So it is possible to set the maximum width and height like this: `width:240` and `height:320`.
