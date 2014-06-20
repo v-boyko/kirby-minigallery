@@ -1,28 +1,19 @@
 kirby-minigallery
 =================
 
-A small kirbytext extension to generate little fancybox galleries with thumbnails on the fly.
+This is a fork of [kirby-minigallery](https://github.com/chbach/kirby-minigallery) implemented in form of tag for Kirby 2.
 
 ## Requirements
 
-You need to have the [Thumb plugin](https://github.com/bastianallgeier/kirbycms-extensions/tree/master/plugins/thumb) in your plugin folder. Otherwise, this plugin won't work.
+This plugin is written with support of [Lightbox2](http://lokeshdhakar.com/projects/lightbox2/) script for showing modal windows.
 
-You have to include jQuery and [FancyBox](http://fancyapps.com/fancybox/) in your site.
+If you want to use any other fancybox script - you can fork this repo and do this by yourself ;)
 
-Then, all you have to do is to copy the `kirbytext.extended.php` in your plugin directory.
+You have to copy the `minigallery.php` in your `site/tags` directory.
 
 ## Usage
 
-First of all, you need to initialize the fancy box in a way like this:
-
- 	<script type="text/javascript">
-		$(document).ready(function() {
-			$(".fancybox").fancybox({
-				prevEffect : 'fade',
-				nextEffect : 'fade'
-			});
-		});
-	</script>
+First of all, you need to initialize the lightbox as it described in it's [docs](http://lokeshdhakar.com/projects/lightbox2/)
 
 You can create a simple gallery with a kirby tag in your text file like this:
 
@@ -37,8 +28,10 @@ If you want to have more than one gallery and don't want them to be connected th
 	(minigallery:01.jpg|02.jpg|03.jpg rel:first)
 	(minigallery:01.jpg|02.jpg|03.jpg rel:second)
 
-To disable the link to the original you can set `fancybox:false`.
+To disable the link to the original you can set `lightbox:false`.
 
-For a custom CSS class use `class:classname`.
+For a custom CSS class of the block use `class:classname`.
+
+For a custom CSS class of the thumb use 'img-class:classname'.
 
 The rest of the available options relate to the Thumb plugin. So it is possible to set the maximum width and height like this: `width:240` and `height:320`.
